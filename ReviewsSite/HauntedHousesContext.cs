@@ -19,6 +19,11 @@ namespace ReviewsSite
         }
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
+            modelbuilder.Entity<HauntedHouse>().HasData(
+                new HauntedHouse() {Id = 1, Name = "Carnival Of Horrors", Location = "Canton, Ohio", Price = 24.00, Duration = 30, 
+                //Need to add Reviews but how?
+                }
+                );
 
         }
 

@@ -9,10 +9,10 @@ namespace ReviewsSite.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Capacity { get; set; }
         public int Duration { get; set; }
         public string Location { get; set; }
-        public bool HandicapAccessible { get; set; }
+        public double Price { get; set; }
+        //Do we need to add an id for reviews?
         public virtual List<Review> Reviews { get; set; }
 
 
