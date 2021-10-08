@@ -22,10 +22,44 @@ namespace ReviewsSite
             modelbuilder.Entity<HauntedHouse>().HasData(
                 new HauntedHouse() {Id = 1, Name = "Carnival Of Horrors", Location = "Canton, Ohio", Price = 24.00, Duration = 30, 
                 //Need to add Reviews but how?
-                }
+                },
+                 new HauntedHouse()
+                 {
+                     Id = 2,
+                     Name = "Seven Floors of Hell",
+                     Location = "Cleveland, Ohio",
+                     Price = 30.00,
+                     Duration = 60,
+                     
+                 },
+                 new HauntedHouse()
+                 {
+                     Id = 3,
+                     Name = "Fear Columbus",
+                     Location = "Columbus, Ohio",
+                     Price = 19.99,
+                     Duration = 30,
+                 },
+                 new HauntedHouse()
+                 {
+                     Id = 4,
+                     Name = "Escape from Blood Prison",
+                     Location = "Mansfield, Ohio",
+                     Price = 25.00,
+                     Duration = 45,
+                 },
+                  new HauntedHouse()
+                  {
+                      Id = 5,
+                      Name = "Bloodview Haunted House",
+                      Location = "Broadview Heights, Ohio",
+                      Price =30.00,
+                      Duration = 30,
+                  }
                 );
 
         }
+
 
 
     }
