@@ -38,17 +38,18 @@ namespace ReviewsSite.Controllers
         [HttpPost]
         public IActionResult AddHauntedHouse(HauntedHouse newHauntedHouse)
         {
-            if (!String.IsNullOrEmpty(newHauntedHouse.Name))
-            {
-                _HauntedHouseRepo.Create(newHauntedHouse);
-                ViewBag.Result = "You have successfully added a haunted house!";
-            }
-            else
-            {
-                ViewBag.Error = "Name is required, please try again.";
-            }
+            _HauntedHouseRepo.Create(newHauntedHouse);
+            //if (!String.IsNullOrEmpty(newHauntedHouse.Name))
+            //{
+            //    _HauntedHouseRepo.Create(newHauntedHouse);
+            //    ViewBag.Result = "You have successfully added a haunted house!";
+            //}
+            //else
+            //{
+            //    ViewBag.Error = "Name is required, please try again.";
+            //}
 
-            return View(newHauntedHouse);
+            return RedirectToAction("Index");
         }
 
         // POST: HauntedHouseController/Create
