@@ -12,7 +12,6 @@ namespace ReviewsSite.Models
         public int Duration { get; set; }
         public string Location { get; set; }
         public double Price { get; set; }
-        //Do we need to add an id for reviews?
         public virtual List<Review> Reviews { get; set; }
 
 

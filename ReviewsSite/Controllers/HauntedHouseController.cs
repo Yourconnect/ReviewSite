@@ -35,6 +35,7 @@ namespace ReviewsSite.Controllers
             return View(new HauntedHouse());
         }
 
+
         [HttpPost]
         public IActionResult AddHauntedHouse(HauntedHouse newHauntedHouse)
         {
@@ -68,7 +69,7 @@ namespace ReviewsSite.Controllers
         //}
 
         // GET: HauntedHouseController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult EditHauntedHouse()
         {
             return View();
         }
@@ -76,16 +77,25 @@ namespace ReviewsSite.Controllers
         // POST: HauntedHouseController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult EditHauntedHouse(int id, HauntedHouse obj)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            //We need to reference the object of HauntedHouse to edit
+
+            //_HauntedHouseRepo.Update(obj);
+            //HauntedHouseRepo.SaveChanges();
+            var HauntedHouseToEdit = _HauntedHouseRepo.GetByID(id);
+            _HauntedHouseRepo.Update(HauntedHouseToEdit);
+            return RedirectToAction("Index");
+
+
+            //try
+            //{
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
         // GET: HauntedHouseController/Delete/5
