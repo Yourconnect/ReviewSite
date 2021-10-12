@@ -69,23 +69,26 @@ namespace ReviewsSite.Controllers
         //}
 
         // GET: HauntedHouseController/Edit/5
-        public IActionResult EditHauntedHouse()
+        public IActionResult EditHauntedHouse(int id)
         {
-            return View();
+             
+            var hauntedhouse = _HauntedHouseRepo.GetByID(id);
+            return View(hauntedhouse);
         }
 
         // POST: HauntedHouseController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditHauntedHouse(int id, HauntedHouse obj)
+        public IActionResult EditHauntedHouse(int id, HauntedHouse hauntedhouse)
         {
             //We need to reference the object of HauntedHouse to edit
 
             //_HauntedHouseRepo.Update(obj);
             //HauntedHouseRepo.SaveChanges();
-            var HauntedHouseToEdit = _HauntedHouseRepo.GetByID(id);
-            _HauntedHouseRepo.Update(HauntedHouseToEdit);
-            return RedirectToAction("Index");
+            //var HauntedHouseToEdit = _HauntedHouseRepo.GetByID(id);
+            _HauntedHouseRepo.Update(hauntedhouse);
+            ViewBag.ReplyMessage = "You have successfully updated the Haunted House.";
+            return View(new HauntedHouse());
 
 
             //try
