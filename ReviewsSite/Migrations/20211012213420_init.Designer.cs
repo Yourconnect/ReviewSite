@@ -9,8 +9,8 @@ using ReviewsSite;
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(HauntedHousesContext))]
-    [Migration("20211007160352_Initial")]
-    partial class Initial
+    [Migration("20211012213420_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,6 +51,38 @@ namespace ReviewsSite.Migrations
                             Location = "Canton, Ohio",
                             Name = "Carnival Of Horrors",
                             Price = 24.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Duration = 60,
+                            Location = "Cleveland, Ohio",
+                            Name = "Seven Floors of Hell",
+                            Price = 30.0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Duration = 30,
+                            Location = "Columbus, Ohio",
+                            Name = "Fear Columbus",
+                            Price = 19.989999999999998
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Duration = 45,
+                            Location = "Mansfield, Ohio",
+                            Name = "Escape from Blood Prison",
+                            Price = 25.0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Duration = 30,
+                            Location = "Broadview Heights, Ohio",
+                            Name = "Bloodview Haunted House",
+                            Price = 30.0
                         });
                 });
 

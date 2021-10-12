@@ -29,6 +29,7 @@ namespace ReviewsSite
             services.AddMvc();
             services.AddDbContext<HauntedHousesContext>();
             services.AddScoped<IRepository<HauntedHouse>, HauntedHouseRepository>();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

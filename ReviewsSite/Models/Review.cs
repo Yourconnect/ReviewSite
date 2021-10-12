@@ -16,5 +16,16 @@ namespace ReviewsSite.Models
         public int StarRating { get; set; }
         public string Comment { get; set; }
         public string Author { get; set; }
+        public Review()
+        {
+
+        }
+        public Review(string Author, string Comment, int StarRating)
+        {
+            this.Author = Author;
+            this.Comment = Comment;
+            this.StarRating = StarRating;
+        }
     }
+
 }
