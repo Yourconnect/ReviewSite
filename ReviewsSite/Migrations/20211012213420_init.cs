@@ -2,7 +2,7 @@
 
 namespace ReviewsSite.Migrations
 {
-    public partial class Initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,7 +50,14 @@ namespace ReviewsSite.Migrations
             migrationBuilder.InsertData(
                 table: "HauntedHouses",
                 columns: new[] { "Id", "Duration", "Location", "Name", "Price" },
-                values: new object[] { 1, 30, "Canton, Ohio", "Carnival Of Horrors", 24.0 });
+                values: new object[,]
+                {
+                    { 1, 30, "Canton, Ohio", "Carnival Of Horrors", 24.0 },
+                    { 2, 60, "Cleveland, Ohio", "Seven Floors of Hell", 30.0 },
+                    { 3, 30, "Columbus, Ohio", "Fear Columbus", 19.989999999999998 },
+                    { 4, 45, "Mansfield, Ohio", "Escape from Blood Prison", 25.0 },
+                    { 5, 30, "Broadview Heights, Ohio", "Bloodview Haunted House", 30.0 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_HauntedHouseId",
