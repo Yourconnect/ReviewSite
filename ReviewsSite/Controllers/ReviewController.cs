@@ -31,7 +31,31 @@ namespace ReviewsSite.Controllers
             review.Id = 0;
             _db.Reviews.Add(review);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "HauntedHouse", new { id = review.HauntedHouseId });
+        }
+        public IActionResult EditReview()
+        {
+            return View();
+        }
+
+        // POST: HauntedHouseController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditReview(int id, Review obj)
+        {
+
+             
+            _db.Reviews.Update(obj);
+            return RedirectToAction("Details", "HauntedHouse", new { id = obj.HauntedHouseId });
+
+
+        }
+        public ActionResult DeleteReview(int id)
+        {
+            var ReviewToDelete = _db.Reviews.Find(id);
+            _db.Reviews.Remove(ReviewToDelete);
+            _db.SaveChanges();
+            return RedirectToAction("Details", "HauntedHouse", new { id = ReviewToDelete.HauntedHouseId });
         }
     }
 }
