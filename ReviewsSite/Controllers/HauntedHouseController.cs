@@ -108,6 +108,8 @@ namespace ReviewsSite.Controllers
             _HauntedHouseRepo.Delete(HauntedHouseToDelete);
             return RedirectToAction("Index");
         }
+        
+
 
         //// POST: HauntedHouseController/Delete/5
         //[HttpPost]

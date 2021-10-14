@@ -38,10 +38,12 @@
 </div>
 @foreach(var review in Model.Reviews)
             {
-                <div>
-                    <p>@review.Author</p>
-                    <p>@review.Comment</p>
-                </div>
+<div>
+    <p>@review.Author</p>
+    <p>@review.Comment</p>
+    <a asp-controller="Review" asp-action="EditReview" asp-route-id="@review.Id">Edit Review</a>
+    <a asp-controller="Review" asp-action="DeleteReview" asp-route-id="@review.Id">Delete Review</a>
+</div>
             }
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
