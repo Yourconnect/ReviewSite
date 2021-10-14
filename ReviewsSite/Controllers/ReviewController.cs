@@ -33,9 +33,10 @@ namespace ReviewsSite.Controllers
             _db.SaveChanges();
             return RedirectToAction("Details", "HauntedHouse", new { id = review.HauntedHouseId });
         }
-        public IActionResult EditReview()
+        public IActionResult EditReview(int id)
         {
-            return View();
+           
+            return View(_db.Reviews.Find(id));
         }
 
         // POST: HauntedHouseController/Edit/5
@@ -44,10 +45,9 @@ namespace ReviewsSite.Controllers
         public IActionResult EditReview(int id, Review obj)
         {
 
-             
             _db.Reviews.Update(obj);
+            _db.SaveChanges();
             return RedirectToAction("Details", "HauntedHouse", new { id = obj.HauntedHouseId });
-
 
         }
         public ActionResult DeleteReview(int id)
