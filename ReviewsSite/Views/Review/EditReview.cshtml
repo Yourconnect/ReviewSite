@@ -4,7 +4,7 @@
     ViewData["Title"] = "EditReview";
 }
 
-<h1>EditReview</h1>
+<h1>Edit Review</h1>
 
 <h4>Review</h4>
 <hr />
@@ -14,11 +14,6 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="HauntedHouseId" />
-            @*<div class="form-group">
-                <label asp-for="HauntedHouseId" class="control-label"></label>
-                <select asp-for="HauntedHouseId" class="form-control" asp-items="@(new SelectList(ViewBag.HauntedHouseId, "Id", "Name"))"></select>
-                <span asp-validation-for="HauntedHouseId" class="text-danger"></span>
-            </div>*@
             <div class="form-group">
                 <label asp-for="Scareablity" class="control-label"></label>
                 <input asp-for="Scareablity" class="form-control" />
@@ -57,7 +52,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller ="HauntedHouse" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
