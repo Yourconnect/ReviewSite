@@ -7,33 +7,54 @@
 
 <div class="HHDetailsContainer">
 
-    <div class="HHDetails">
-        <h4>@Html.DisplayFor(model => model.Name)</h4>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Duration)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Duration) min.
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class="col-sm-10">
-            $@Html.DisplayFor(model => model.Price)
-        </dd>
-        </dl>
+    @*<div class="HHDetails">
+            <h4>@Html.DisplayFor(model => model.Name)</h4>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Duration) min.
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                $@Html.DisplayFor(model => model.Price)
+            </dd>
+            </dl>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                <a asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add a review</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>*@
+
+    <div class="card" style="width: 18rem;">
+        @*<img src="..." class="card-img-top" alt="...">*@
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+            <p class="card-text">
+                <ul>
+                    <li>Duration: @Html.DisplayFor(model => model.Duration) min.</li>
+                    <li>Location: @Html.DisplayFor(model => model.Location)</li>
+                    <li>Price: $@Html.DisplayFor(model => model.Price)</li>
+                </ul>
+            </p>
+            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+        </div>
         <div>
             <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
             <a asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Add a review</a> |
             <a asp-action="Index">Back to List</a>
         </div>
     </div>
+   
 
     <div class="ReviewDetails">
         @foreach (var review in Model.Reviews)

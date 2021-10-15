@@ -73,8 +73,10 @@ h1 {
 }
 
 footer{
+    position:absolute;
     margin-top: 10px;
     margin-left: 10px;
+    z-index: -1;
 }
 
 footer > p{
@@ -116,3 +118,54 @@ a{
      margin-bottom: 10px;
      padding: 10px 10px;
 }
+
+.card{
+    height: 20%;
+    background-color: black;
+    border-radius: 30px;
+}
+
+
+/*Star Styljng*/
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        top: -9999px;
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
