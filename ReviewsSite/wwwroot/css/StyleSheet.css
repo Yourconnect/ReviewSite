@@ -5,11 +5,18 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-
+    overflow: hidden;
 }
 
-.example::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background: red;
 }
 
 .anim-body{
@@ -50,6 +57,8 @@ header{
 
 .content {
     position: absolute;
+    overflow: auto;
+    max-height: 60%;
     top: 15%;
     bottom: auto;
     left: 10%;
@@ -104,6 +113,8 @@ a{
     }
 
 
+/*Details Styling*/
+
 .HHDetailsContainer {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -123,6 +134,11 @@ a{
     height: 20%;
     background-color: black;
     border-radius: 30px;
+}
+
+.HHLinks{
+    margin-bottom: 20px;
+    align-self: center;
 }
 
 
@@ -154,12 +170,12 @@ a{
         }
 
     .rate > input:checked ~ label {
-        color: #ffc700;
+        color: darkred;
     }
 
     .rate:not(:checked) > label:hover,
     .rate:not(:checked) > label:hover ~ label {
-        color: #deb217;
+        color: darkred;
     }
 
     .rate > input:checked + label:hover,
@@ -167,5 +183,5 @@ a{
     .rate > input:checked ~ label:hover,
     .rate > input:checked ~ label:hover ~ label,
     .rate > label:hover ~ input:checked ~ label {
-        color: #c59b08;
+        color: darkred;
     }
