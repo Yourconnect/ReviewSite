@@ -36,20 +36,20 @@ namespace ReviewsSite.Tests
             Assert.IsType<ViewResult>(Result);
         }
 
-        [Fact] //passes
-        public void Edit_Displays_HauntedHouse_to_Edit()
-        {
-            //Arrange
-            var HauntedHouse = new HauntedHouse(1, "test house");
+        //[Fact] //passes
+        //public void Edit_Displays_HauntedHouse_to_Edit()
+        //{
+        //    //Arrange
+        //    var HauntedHouse = new HauntedHouse(1, "test house");
 
-            //Act
-            var Result = sut.EditHauntedHouse(HauntedHouse.Id);
+        //    //Act
+        //    var Result = sut.EditHauntedHouse(HauntedHouse.Id);
 
 
-            //Assert
-            Assert.IsType<RedirectToActionResult>(Result);
+        //    //Assert
+        //    Assert.IsType<RedirectToActionResult>(Result);
 
-        }
+        //}
     }
 
 

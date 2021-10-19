@@ -14,9 +14,11 @@ namespace ReviewsSite.Models
         public double Price { get; set; }
         public virtual List<Review> Reviews { get; set; }
 
-
-
-
+        //public HauntedHouse(int Id, string Name)
+        //{
+        //    this.Id = Id;
+        //    this.Name = Name;
+        //}
     }
 
 
