@@ -124,16 +124,18 @@ a{
 
 }
 
-.review{
-     border: 1px solid white;
-     margin-bottom: 10px;
-     padding: 10px 10px;
+
+.review {
+    border: 1px solid white;
+    margin-bottom: 10px;
+    padding: 10px 10px;
 }
 
 .card{
     height: 20%;
     background-color: black;
     border-radius: 30px;
+   
 }
 
 .HHLinks{
@@ -185,3 +187,8 @@ a{
     .rate > label:hover ~ input:checked ~ label {
         color: darkred;
     }
+
+
+#carouselExampleControls {
+    border: 5px solid red;
+}

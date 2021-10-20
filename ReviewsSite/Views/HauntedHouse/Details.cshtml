@@ -28,41 +28,55 @@
     </div>
 
 
-    <div class="ReviewDetails">
+    @*<div class="ReviewDetails">*@
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active"> <p>Swipe to view all reviews</p> </div>
+
         @foreach (var review in Model.Reviews)
         {
-            @*<div class="review">
-                    <p>@review.StarRating stars</p>
-                    <p>@review.Scareablity points</p>
-                    <p>Would you recommend this house? @review.Recommend</p>
-                    <p>Would you come back? @review.WouldReturn</p>
-                    <p>@review.Comment</p>
-                    <p>By: @review.Author</p>
+        <div class="carousel-item">
+
+            @*<div class="card" style="width: 30rem;">
+        <div class="card-body">*@
+            <card>
+                <h5 class="card-title">Review By: @review.Author</h5>
+                <p class="card-text">
+                <p>@review.Comment</p>
+                <ul>
+                    <li>@review.StarRating Stars</li>
+                    <li>@review.Scareablity Scareability Points</li>
+                </ul>
+                <p>Would you recommend this house? @review.Recommend?Yes:No</p>
+                <p>Would you come back? @review.WouldReturn</p>
+                </p>
+
+                <div class="HHLinks">
                     <a asp-controller="Review" asp-action="EditReview" asp-route-id="@review.Id">Edit Review</a> |
                     <a asp-controller="Review" asp-action="DeleteReview" asp-route-id="@review.Id">Delete Review</a>
-                </div>*@
-
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Review By: @review.Author</h5>
-                    <p class="card-text">
-                    <p>@review.Comment</p>
-                    <ul>
-                        <li>@review.StarRating Stars</li>
-                        <li>@review.Scareablity Scareability Points</li>
-                    </ul>
-                    <p>Would you recommend this house? @review.Recommend?Yes:No</p>
-                    <p>Would you come back? @review.WouldReturn</p>
-                    </p>
                 </div>
-                    <div class="HHLinks">
-                        <a asp-controller="Review" asp-action="EditReview" asp-route-id="@review.Id">Edit Review</a> |
-                        <a asp-controller="Review" asp-action="DeleteReview" asp-route-id="@review.Id">Delete Review</a>
-                    </div>
-                    @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
-            </div>
-        }
+            </card>
+        </div>
+
+        @*</div>*@
+        @*</div>*@
+    }
 
     </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+    @*</div>*@
 
 </div>
