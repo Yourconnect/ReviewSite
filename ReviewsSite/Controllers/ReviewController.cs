@@ -22,6 +22,7 @@ namespace ReviewsSite.Controllers
         //reminder: remove the create new review from review index
         public IActionResult Create(int id)
         {
+            // consider passing along the haunted house name to the viewbag
             ViewBag.HauntedHouseId = id;
             return View();
         }
