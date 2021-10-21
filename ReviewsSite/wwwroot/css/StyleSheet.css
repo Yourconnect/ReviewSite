@@ -118,6 +118,7 @@ a{
 .HHDetailsContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+
 }
 
 .HHDetails{
@@ -191,4 +192,21 @@ a{
 
 #carouselExampleControls {
     border: 5px solid red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    grid-template-areas: ". carousel-item .";
+}   
+
+
+.carousel-item {
+    
+   grid-area: carousel-item;
+    
+    /*padding-left: 35%;
+    padding-right: 15%;*/
+
+
 }
