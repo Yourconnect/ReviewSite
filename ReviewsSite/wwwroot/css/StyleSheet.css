@@ -57,8 +57,9 @@ header{
 
 .content {
     position: absolute;
-    overflow: auto;
+    overflow-y: auto;
     max-height: 60%;
+    width: auto;
     top: 15%;
     bottom: auto;
     left: 10%;
@@ -137,31 +138,33 @@ a{
 /*About us styling*/
 .about-us-container {
     position: relative;
-    width: 1100px; 
+    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: initial;
-    padding: 30px;
+    padding: 40px;
+    margin-left: 180px;
 }
-.about-us-container .about-us-card {
+/*.about-us-container */.about-us-card {
     position: relative;
-    max-width: 300px;
-    height: 622px;
+    max-width: 280px;
+    max-height: 100%;
     background: rgb(46, 45, 45);
     margin: 30px 10px;
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    transition: 0.3s ease-in-out;
+    align-content: center;
+   /* transition: 0.3s ease-in-out;*/
 }
-
+/*
 .about-us-container .about-us-card:hover {
     height: 622px;
-}
+}*/
 
-.about-us-container .about-us-card .imgBx {
+/*.about-us-container .about-us-card */.imgBx {
     position: relative;
     width: 280px;
     height: 400px;
@@ -171,32 +174,33 @@ a{
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.about-us-container .about-us-card .imgBx img {
+/*.about-us-container .about-us-card .imgBx */img {
     max-width: 100%;
     border-radius: 4px;
 }
 
 .about-us-content {
     line-height: 23px;
+    margin-top: 5px;
 }
 
-.about-us-container .about-us-card .about-us-content {
+/*.about-us-container .about-us-card */.about-us-content {
     position: relative;
-    margin-top: -140px;
-    padding: 10px 15px;
+/*    margin-top: -140px;*/
+  /*  padding: 10px 15px;*/
     text-align: center;
     color: #fff;
-    visibility: hidden;
+   /* visibility: hidden;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;*/
 }
 
-.about-us-container .about-us-card:hover .about-us-content {
+/*.about-us-container .about-us-card:hover .about-us-content {
     visibility: visible;
     opacity: 1;
     margin-top: -40px;
     transition-delay: 0.3s;
-}
+}*/
 
 .about-us {
     display: flex;
@@ -215,17 +219,21 @@ a{
     color: #fff;
 }
 
-    .who-we-are span {
-        width: 60%;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-    }
+.who-we-are span {
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.imgBx{
+ /*   padding-left: 10px;*/
+}
+        
 .social-media a {
     color: #fff;
 }
 
-.card{
+.about-us-card{
     height: 20%;
     background-color: black;
     border-radius: 30px;
