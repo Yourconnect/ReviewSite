@@ -7,7 +7,7 @@
 
     <div class="HHDetailsContainer">
 
-        <div class="card" style="width: 18rem;">
+        <div class="HHDetails" style="width: 18rem;">
             @*<img src="..." class="card-img-top" alt="...">*@
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
@@ -48,7 +48,7 @@
                                 <li>@review.StarRating Stars</li>
                                 <li>@review.Scareablity Scareability Points</li>
                             </ul>
-                            <p>Would you recommend this house? @review.Recommend?Yes:No</p>
+                            <p>Would you recommend this house? @review.Recommend</p>
                             <p>Would you come back? @review.WouldReturn</p>
                             </p>
 
