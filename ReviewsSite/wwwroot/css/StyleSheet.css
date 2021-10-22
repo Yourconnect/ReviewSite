@@ -76,6 +76,8 @@ h1 {
     text-align: center;
     padding-bottom: 10px;
     padding-right: 10px;
+    color:red;
+    font-weight:700;
 }
 
 .homeDescription{
@@ -119,16 +121,18 @@ a{
 .HHDetailsContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+
 }
 
 .HHDetails{
 
 }
 
-.review{
-     border: 1px solid white;
-     margin-bottom: 10px;
-     padding: 10px 10px;
+
+.review {
+    border: 1px solid white;
+    margin-bottom: 10px;
+    padding: 10px 10px;
 }
 /*About us styling*/
 .about-us-container {
@@ -225,6 +229,7 @@ a{
     height: 20%;
     background-color: black;
     border-radius: 30px;
+   
 }
 
 .HHLinks{
@@ -233,7 +238,7 @@ a{
 }
 
 
-/*Star Styljng*/
+/*Star Styling*/
 
 .rate {
     float: left;
@@ -276,3 +281,34 @@ a{
     .rate > label:hover ~ input:checked ~ label {
         color: darkred;
     }
+
+
+#carouselExampleControls {
+    border: 5px solid red;
+    width: 100%;
+    
+    
+}
+
+
+.carousel-item {
+    padding: 3% 15% 1% 25%;
+    
+    
+}
+
+footer div {
+    font-size: 10px;
+    color: gray;
+    opacity: 50%;
+}
+
+footer a {
+    font-size: 10px;
+    color: gray;
+}
+
+footer a:hover {
+    color:darkred;
+}
+
