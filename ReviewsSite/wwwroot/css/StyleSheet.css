@@ -75,6 +75,8 @@ h1 {
     text-align: center;
     padding-bottom: 10px;
     padding-right: 10px;
+    color:red;
+    font-weight:700;
 }
 
 .homeDescription{
@@ -145,7 +147,7 @@ a{
 }
 
 
-/*Star Styljng*/
+/*Star Styling*/
 
 .rate {
     float: left;
@@ -193,20 +195,28 @@ a{
 #carouselExampleControls {
     border: 5px solid red;
     width: 100%;
-    display: grid;
-    grid-template-columns: .5fr 2fr .5fr;
-    grid-template-rows: 1fr;
-    gap: 0px;
-    grid-template-areas: ". carousel-item .";
-}   
+    
+    
+}
 
 
 .carousel-item {
+    padding: 3% 15% 1% 25%;
     
-   grid-area: carousel-item;
     
-    /*padding-left: 35%;
-    padding-right: 15%;*/
+}
 
+footer div {
+    font-size: 10px;
+    color: gray;
+    opacity: 50%;
+}
 
+footer a {
+    font-size: 10px;
+    color: gray;
+}
+
+footer a:hover {
+    color:darkred;
 }
